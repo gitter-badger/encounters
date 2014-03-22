@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Maven+Pro' rel='stylesheet' type='text/css'>
+    <link href='assets/css/bootstrap.min.css' rel='stylesheet' />
+    <link href='assets/css/main.css' rel='stylesheet' />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
+<body>
+    
+    <div class='container-fluid'>
+        <nav class="navbar navbar-default" role="navigation">
+            <div class='container'>
+                <div class='navbar-header'>
+                    <a href='index.html' class='navbar-brand'>Encounters</a>
+                </div>    
+                <ul class="nav navbar-nav">
+                    <li><a href='#'>New Encounter</a></li>
+                    <li><a href='#'>Browse Encounters</a></li>
+                    <li><a href='#'>Create random encounter</a></li>
+                </ul>
+                <div id="btnPrintable" class="btn btn-default navbar-btn pull-right">Hide Forms</button>
+            </div>
+        </nav>
+        
+        <div class="row" id="newEnemyForm">
+            <div class="col-md-6">
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label for="txtName" class="col-sm-2 control-label">Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="txtName" placeholder="" value="Servitor" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtNumEnemies" class="col-sm-2 control-label">Number</label>
+                        <div class="col-sm-10">
+                            <input type="number" class="form-control" id="txtNumEnemies" placeholder="" value="2" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtCritDmg" class="col-sm-2 control-label">CP</label>
+                        <div class="col-sm-10">        
+                            <input type="number" class="form-control" id="txtCritDmg" placeholder="" value="5" />
+                        </div>
+                    </div>
+                        <div class="form-group">
+                        <label for="txtHP" class="col-sm-2 control-label">HP</label>
+                        <div class="col-sm-10">
+                            <input type="number" class="form-control" id="txtHP" placeholder="" value="12" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button id="btnAddEnemy" class="btn btn-success">Add NPC's</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <div class="col-md-2">
+                    <button id="btnAddAttribute" class="btn btn-success">Add Stat</button>
+                </div>
+                <form class="form-inline" role="form">
+                    <div class="col-md-6" id="Attributes">
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <div id="Encounter"></div>
+        
+    </div>
+    <script src="assets/js/encounters_functions.js" type="text/javascript"></script>
+    <script src='assets/js/encounters_events.js' type='text/javascript'></script>
+    <script src="assets/js/encounters_objects.js" type="text/javascript"></script>
+</body>
+</html>

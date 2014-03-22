@@ -1,44 +1,21 @@
-<!doctype>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
     <link href='http://fonts.googleapis.com/css?family=Maven+Pro' rel='stylesheet' type='text/css'>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <link href='assets/css/main.css' rel='stylesheet' />
+    <link href='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css' rel='stylesheet' />
+    <link href='assets/css/simple-sidebar.css' rel='stylesheet' />
 </head>
 <body>
     <div class='container'>
-        <div class="btn" id="btnMenu">Hide/Show Menu</div>
-        <div class='leftPanel'>
-        
-        <div id='Menu' class='Menu'>
-            <div class='Info'>
-                <h1>Encounter Cheat sheet</h1>
-                <p>This simple tool allows you to create encounter cheat sheets to allow you to keep track of each enemy during an encounter</p>
-                <p>Simply fill out the form for each enemy type and a cheat sheet will be generated for you to print out</p>
-                <p>This is still a WIP and very rough around the edges, but any feedback is appreciated</p>
-            </div>
-            <form class='NewEnemyForm'>
-                <label>Enemy Name</label>
-                <input type='text' name='enemyName' id='enemyName' />
-                
-                <label>Number enemies</label>
-                <input type='text' name='numOfEnemy' id='numOfEnemy' />
-                
-                <label>Critical Damage Points</label>
-                <input type='text' name='critPoints' id='critPoints' />
-                
-                <label>Health Points</label>
-                <input class='form-control' type='text' name='healthPoints' id='healthPoints' />
-                
-                <input type='button' id='btnNewEnemy' class='btn' value='Add Enemy' />
-            </form>
+        <div class='page-header'>
+            <h1>Encounters <small>alpha</small></h1>
+            <p>Generate GM cheat sheets for your encounters, cheat sheets allow you to keep track of NPC stats during an encounter.</p>
         </div>
-        </div>
-        <div class='rightPanel'>
-            <div id='errors' class='errors'></div>
-            <div id='encounters'></div>
-        </div>
+    
+        <a href='NewEncounter.html' class='btn btn-primary'>Create a new encounter</a>
+        <a href='#' class='btn btn-danger'>View existing encounters</a>
+        <a href='#' class='btn btn-danger'>Create a random encounter</a>
     </div>
-    <script src='assets/js/encounters.js' type='text/javascript'></script>
 </body>
 </html>
