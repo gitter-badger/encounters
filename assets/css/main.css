@@ -83,7 +83,11 @@ html,body
     border:0px;
 }
 
+.attributerow
+{
+    margin:0px 0px 3px 0px;
+}
 
-
-
-
+ul li:hover {
+    cursor: pointer;
+}

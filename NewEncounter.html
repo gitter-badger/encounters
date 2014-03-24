@@ -5,6 +5,7 @@
     <link href='assets/css/bootstrap.min.css' rel='stylesheet' />
     <link href='assets/css/main.css' rel='stylesheet' />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <sript src="assets/js/bootstrap.js" ></sript>
 </head>
 <body>
     
@@ -24,7 +25,13 @@
         </nav>
         
         <div class="row" id="newEnemyForm">
-            <div class="col-md-6">
+            <div class="col-md-2">
+                <ul id="lstNPC" class="list-group">
+                    <li class="list-group-item">Narco Ganger</li>
+                    <li class="list-group-item">Servitor</li>
+                </ul>
+            </div>
+            <div class="col-md-5">
                 <form class="form-horizontal" role="form">
                     <div class="form-group">
                         <label for="txtName" class="col-sm-2 control-label">Name</label>
@@ -57,7 +64,7 @@
                     </div>
                 </form>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-5">
                 <div class="col-md-2">
                     <button id="btnAddAttribute" class="btn btn-success">Add Stat</button>
                 </div>
@@ -66,13 +73,14 @@
                     </div>
                 </form>
             </div>
+            
         </div>
         
         <div id="Encounter"></div>
-        
+              
     </div>
     <script src="assets/js/encounters_functions.js" type="text/javascript"></script>
-    <script src='assets/js/encounters_events.js' type='text/javascript'></script>
     <script src="assets/js/encounters_objects.js" type="text/javascript"></script>
+    <script src='assets/js/encounters_init.js' type='text/javascript'></script>
 </body>
 </html>

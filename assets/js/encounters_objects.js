@@ -1,4 +1,17 @@
-function Enemy(name, cp, hp){
+function Encounters() {
+    this.NPCList = {};
+}
+
+Encounters.prototype.AddNPC = function(name, npc) {
+    this.NPCList[name] = npc;
+};
+
+Encounters.prototype.GetNPC = function(name) {
+    return this.NPCList[name];
+};
+
+
+function NPC(name, cp, hp){
     this.name= name;
     this.cp = cp;
     this.hp = hp;
@@ -8,14 +21,14 @@ function Enemy(name, cp, hp){
 }
 
 //Properties
-Enemy.prototype.name = '';
-Enemy.prototype.cp = '';
-Enemy.prototype.hp = '';
-Enemy.template = '';
-Enemy.prototype.Stat = {};
+NPC.prototype.name = '';
+NPC.prototype.cp = '';
+NPC.prototype.hp = '';
+NPC.template = '';
+NPC.prototype.Stat = {};
 
 //Functions
-Enemy.prototype.GetHTMLTemplate = function() {
+NPC.prototype.GetHTMLTemplate = function() {
     
     console.log(this);
     
@@ -46,6 +59,6 @@ Enemy.prototype.GetHTMLTemplate = function() {
     return this.template;
 };
 
-Enemy.prototype.AddStat = function(key, value) {
+NPC.prototype.AddStat = function(key, value) {
     this.Stats[key] = value;
 };

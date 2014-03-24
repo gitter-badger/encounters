@@ -1,5 +1,4 @@
-function resetForm()
-{
+function resetForm() {
     $("#txtName").val("");
     $("#txtNumEnemies").val("");
     $("#txtCritDmg").val("");
@@ -8,8 +7,20 @@ function resetForm()
     $("#Attributes").html("");
 }
 
-function validatePage()
-{
+function loadNPCFromObject(NPC) {
+    $("#txtName").val(NPC.name);
+    $("#txtCritDmg").val(NPC.cp);
+    $("#txtHP").val(NPC.hp);
+    $("#txtNumEnemies").val("1");
+    
     
 }
 
+function AddStat(name, value) {
+    
+}
+
+function AddNPCToList(npc)
+{
+    
+}

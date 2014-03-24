@@ -1,7 +1,18 @@
+var Page = new Encounters();
+
 $(document).ready(function() {   
     $("#btnAddEnemy").on("click", AddEnemy_Click);
     $("#btnAddAttribute").on("click", addAttribute_Click);
     $("#btnPrintable").on("click", printable_Click);
+    $("ul#lstNPC li").on("click", listItem_Click);
+    
+    var enemy = new NPC("Narco Ganger", 4, 10);
+    enemy.AddStat("Str", 5);
+    enemy.AddStat("Ag", 5);
+    
+    
+    Page.AddNPC(enemy.name, enemy);
+    
 });
 
 function AddEnemy_Click(e)
@@ -13,7 +24,7 @@ function AddEnemy_Click(e)
     var cp = $("#txtCritDmg").val();
     var hp = $("#txtHP").val();
     
-    var enemy = new Enemy(name, cp, hp);
+    var enemy = new NPC(name, cp, hp);
     
     $(".attributerow").each(function(index) {
         var attrName = $(this).find("#txtAttrName").val();
@@ -50,4 +61,11 @@ function addAttribute_Click(e)
     
     $("#Attributes").append(template);
     
+}
+
+function listItem_Click(e)
+{
+    var npc = Page.GetNPC($(this).text());
+    console.log(npc);
+    loadNPCFromObject(Page.GetNPC($(this).text()));
 }
